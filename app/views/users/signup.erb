@@ -1,19 +1,18 @@
-
-<center><div class="container">
+<div class="container">
+  <section id="content">
 <%= display_error %>
 <h1>Register Now</h1>
   <form action="/signup" method="POST">
-    Username:
-    <input type="text" name="user[username]"><br>
-    <span> Password:</span>
-    <input type="password" name="user[password]"><br>
-    Confirm Password:
-    <input type="password" name="user[password_confirmation]">
+
+    <input type="text" placeholder="Username" name="user[username]"id="username">
+
+    <input type="password"  placeholder="Password" name="user[password]"id="username">
+    <input type="password" placeholder="Confirm Password"name="user[password_confirmation]"id="username">
     <input type="submit" value="Signup!" id="button">
-  </form>
-</div>
 
-<div></div>
-<div >
+    </form><!-- form -->
 
-</div></center>
+  </section><!-- content -->
+</div><!-- container -->
+
+

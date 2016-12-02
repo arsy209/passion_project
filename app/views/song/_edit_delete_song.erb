@@ -1,17 +1,19 @@
+<% if logged_in? %>
 <% if song.user_id == current_user.id %>
-  <form action="/songs/<%= song.id %>" method="POST">
-    <input type="hidden" name="_method" value="DELETE">
-    <input type="submit" value="Delete This Song" id="button">
-  </form>
 
-  <a href="/my_songs" class="edit_link">Edit this song</a>
+<br><br><br>
   <form action="/songs/<%= song.id %>" method="POST" class="edit_form">
       <input type="hidden" name="_method" value="PUT">
-    Edit Song</h1> Title:
+    <h1>Edit Song</h1> Title:
       <input name="song[title]" type="text" value="<%= song.title %>">
     Song URL:
       <input name="song[song_url]" type="text" value="<%= song.song_url %>">
-      <input type="submit" value="Edit this song"><br>
+      <input type="submit" value="Edit this song"><br><br>
+      <form action="/songs/<%= song.id %>" method="POST">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" value="Delete This Song" id="button">
+  </form>
   </form>
 <% else %>
+<% end %>
 <% end %>

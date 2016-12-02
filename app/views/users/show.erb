@@ -1,9 +1,7 @@
-<div class="container">
-  <%= erb :_nav_bar %>
-</div>
 
-<div>
+<% if @playlist != current_user %>
+  <%@playlists.each do |playlist| %>
+     <ol><a href="/playlists/<%= playlist.id %>"><%= playlist.name %></a></ol>
+  <% end %>
 
-  <%= erb :'playlist/_create_playlist' %>
-
-  </div>
+  <% end %>
