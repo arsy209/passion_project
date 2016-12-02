@@ -7,10 +7,8 @@
   <a href="/my_songs" class="edit_link">Edit this song</a>
   <form action="/songs/<%= song.id %>" method="POST" class="edit_form">
       <input type="hidden" name="_method" value="PUT">
-    Edit -- Title:
+    Edit Song</h1> Title:
       <input name="song[title]" type="text" value="<%= song.title %>">
-    Album Art:
-      <input name="song[album_art]" type="text" value="<%= song.album_art %>">
     Song URL:
       <input name="song[song_url]" type="text" value="<%= song.song_url %>">
       <input type="submit" value="Edit this song"><br>
