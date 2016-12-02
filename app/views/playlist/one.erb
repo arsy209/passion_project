@@ -14,7 +14,7 @@
     <%else%>
     Tracks:<br>
     <% @songs.each do |song| %>
-       <a href="/songs/<%= song.id %>"><%= song.title%></a>
+       <a href="/songs/<%= song.id %>"><%= song.title%></a><br>
 
     <% end %>
 
