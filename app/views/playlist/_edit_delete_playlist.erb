@@ -6,7 +6,7 @@
 
   <form action="/playlists/<%= playlist.id %>" method="POST">
       <input type="hidden" name="_method" value="PUT">
-    Edit Title:
+    Edit PlayList:
       <input name="playlist[name]" type="text" value="<%= playlist.name %>">
       <input type="submit" value="Change your playlist name" id="button"><br>
   </form>

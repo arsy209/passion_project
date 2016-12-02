@@ -3,7 +3,7 @@ get '/' do
 end
 
 get '/login' do
-  erb :'index'
+  erb :'sessions/login'
 end
 
 post '/login' do
@@ -17,22 +17,12 @@ post '/login' do
   end
 end
 
-get '/signup' do
-  erb :'auth/signup', layout: false
-end
-
-post '/signup' do
-  user = User.new(params[:user])
-  if user.save
-    session[:user_id] = user.id
-    redirect("/playlists/all")
-  else
-    session[:error] = user.errors.messages
-    redirect("/signup")
-  end
+get '/users/:id' do
+  @user = User.find(params[:id])
+  erb :'users/show'
 end
 
 get '/logout' do
   session[:user_id] = nil
-  redirect("/login")
+  redirect("/")
 end
