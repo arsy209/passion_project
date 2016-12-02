@@ -1,8 +1,8 @@
 <div><br>
-  <h1>My Songs</h1>
+  <h1>My <span style="color:green">Songs</span></h1>
 <div>
   <% @songs.each do |song| %>
-<a href="/songs/<%= song.id %>"><%= song.title %></a>
+<a href="/songs/<%= song.id %>"><%= song.title %></a><br>
     <% end %>
   </div>
 
