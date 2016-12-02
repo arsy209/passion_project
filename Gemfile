@@ -25,3 +25,6 @@ group :test, :development do
   gem 'factory_girl'
   gem 'faker'
 end
+
+gem 'soundcloud', '~>0.3.2'
+gem 'dotenv'
