@@ -1,6 +1,5 @@
 
 get '/my_songs' do
-  logged_in?
   user = current_user
   @songs = user.songs
   erb :"/song/my_songs"
@@ -15,7 +14,6 @@ post '/my_songs' do
 end
 
 get '/songs/:id' do |id|
-  logged_in?
     @song = Song.find(id)
     @playlist = @song.playlist
     p @playlist

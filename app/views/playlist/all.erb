@@ -1,15 +1,13 @@
-<div class="container">
-  <%= erb :_nav_bar %>
-</div>
-
-<div>
-
+<center><div class ="container">
+<% if logged_in? %>
   <%= erb :'playlist/_create_playlist' %>
+   <% end %>
+<%else%>
+<u><h1>All PlayLists:</h1></u>
 
-  <div><br><br>
     <% @playlists.each do |playlist| %>
-      <div class="playlist"><a href="/playlists/<%= playlist.id %>"><%= playlist.name %></a>
-      
-    <% end %><br><br>
-  </div>
-</div>
+     <ol><a href="/playlists/<%= playlist.id %>"><%= playlist.name %></a></ol>
+    <% end %>
+
+
+</div></center>

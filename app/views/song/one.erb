@@ -1,16 +1,11 @@
-<div class="container">
-  <%= erb :_nav_bar %>
-</div>
+<center><div class="container">
 
-<div class="bottom_background"></div>
-
-<div class="bottom"><br><br>
 
    <%= erb :'/song/_edit_delete_song', :locals => {song: @song} %><br><br>
 
   <div class="song_info"><br><br>
     Title: <a href="<%= @song.song_url %>"><%= @song.title %></a><br><br>
-    Added By: <%= @song.user.username %>
+    Added By: <a href="<%= @song.user.username %>"><%= @song.user.username %>
   </div>
 
-</div>
+</div></center>

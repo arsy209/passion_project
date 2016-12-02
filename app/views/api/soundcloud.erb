@@ -1,20 +1,15 @@
-<div class="container">
-  <%= erb :_nav_bar %>
-</div>
 
-<div class="bottom_background"></div>
-
-
-<div class="bottom">
+<div>
 
 <form>
-  Search Soundcloud:
+  Search Now:
   <input type="search" name="search" action="/soundcloud" method="GET">
 </form>
 
-  <div class="all_playlists"><br><br>
+  <div><br><br>
     <% @tracks.each do |track| %>
-      <div class="playlist"><a href="<%= track.permalink_url %>"><%= track.title %></a></div>
+      <div ><a href="<%= track.permalink_url %>"><%= track.title %></a></div>
+      <a href="<%= track.permalink_url %>"><%= track.title %></a></div>
     <% end %>
   </div>
 </div>

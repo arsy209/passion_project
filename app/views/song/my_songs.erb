@@ -1,15 +1,8 @@
-<div class="container">
- <%= erb :_nav_bar %>
-</div>
-
-<div class="bottom_background"></div>
-
-<div class="bottom">
+<div><br>
   <h1>My Songs</h1>
-  <div class="all_songs"><br><br>
-    <% @songs.each do |song| %>
-      <div class="my_songs"><a href="/songs/<%= song.id %>"><%= song.title %>"/></a>
-      <%= song.title %></div>
+<div>
+  <% @songs.each do |song| %>
+<a href="/songs/<%= song.id %>"><%= song.title %></a>
     <% end %>
   </div>
 
