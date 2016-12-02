@@ -1,0 +1,12 @@
+<div class="container">
+<h1><span>Login Now: </span></h1><br>
+    <%= login_error %>
+  <form action="/login" method="POST">
+    Username:
+    <input type="text" name="user[username]">
+   <span> Password:</span>
+    <input type="password" name="user[password]">
+    <input type="submit" value="Login!" id="button">
+    </form>
+  </div>
+</div>

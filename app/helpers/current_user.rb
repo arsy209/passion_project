@@ -1,11 +1,8 @@
-def current_user
-  if session[:user_id]
-    return User.find(session[:user_id])
-  else
-    return nil
-  end
+def logged_in?
+  User.exists?(session[:user_id])
 end
 
-def logged_in
-  redirect('/login') if session[:user_id] == nil
+def current_user
+  User.find(session[:user_id])
 end
+

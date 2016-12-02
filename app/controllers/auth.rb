@@ -3,7 +3,7 @@ get '/' do
 end
 
 get '/login' do
-  erb :'index'
+  erb :'auth/login'
 end
 
 post '/login' do
@@ -17,8 +17,14 @@ post '/login' do
   end
 end
 
+get '/auth/:id' do
+  @user = User.find(params[:id])
+  erb :'auth/show'
+end
+
+
 get '/signup' do
-  erb :'auth/signup', layout: false
+  erb :'auth/signup'
 end
 
 post '/signup' do
@@ -34,5 +40,5 @@ end
 
 get '/logout' do
   session[:user_id] = nil
-  redirect("/login")
+  redirect("/")
 end
