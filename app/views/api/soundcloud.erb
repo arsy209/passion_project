@@ -1,15 +1,15 @@
-
+<br><br>
 <div>
 
 <form>
   Search Now:
-  <input type="search" name="search" action="/soundcloud" method="GET">
+  <input type="search" placeholder= "music" name="search" action="/soundcloud" method="GET">
 </form>
 
   <div><br><br>
     <% @tracks.each do |track| %>
       <div ><a href="<%= track.permalink_url %>"><%= track.title %></a></div>
-      <a href="<%= track.permalink_url %>"><%= track.title %></a></div>
+
     <% end %>
   </div>
 </div>

@@ -1,7 +1,62 @@
 $(document).ready(function() {
-  // This is called after the document has loaded in its entirety
-  // This guarantees that any elements we bind to will exist on the page
-  // when we try to bind to them
+ $("body").on("click", "#signup", function(event){
+    event.preventDefault();
+    $target = $(event.target);
+    $.ajax({
+      type: "GET",
+      url: "/signup",
+    }).done(function(response){
+      $(".container").replaceWith(response);
+    })
+  })
 
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+  $("body").on("click", "#login", function(event){
+    event.preventDefault();
+    $target = $(event.target);
+    $.ajax({
+      type: "GET",
+      url: "/login",
+    }).done(function(response){
+      $(".container").replaceWith(response);
+    })
+  })
+  $( ".playlist").hover(
+  function(event) {
+    $target = $(event.target);
+    $target.children().show()
+  })
+
+$( ".playlist" ).mouseleave(
+  function() {
+    $(".song").hide()
+  })
+
+$("a.edit_link").click(function(event){
+  event.preventDefault();
+  $target = $(event.target);
+  $target.hide();
+  $(".edit_form").show();
+
+})
+
+
+$(".edit_form").on("submit", function(event){
+  event.preventDefault();
+  $target = $(event.target);
+  $.ajax({
+     url: $target.attr("action"),
+     type: "PUT",
+     data: $target.serialize()
+  }).done(function(response){
+    $("html").html(response)
+  })
+})
+
+  $('.song').draggable();
+  $('.playlist').droppable({
+      drop: function( event) {
+        $(".container").append("<span>The drag and drop features are comming soon!</span>");
+    }
+  })
+
 });

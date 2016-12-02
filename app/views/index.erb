@@ -2,20 +2,17 @@
 
 
 
-<div>
-
-
+<div id= "home">
+<br><br>
+<br><br>
+<br><br>
 <center><h1>Welcome</h1></center>
 
-<div class ="container">
-
-<div class ="container">
-
-<div><br><br>
-    <% @playlists.each do |playlist| %>
-     <div><a href="/playlists/<%= playlist.id %>"><%= playlist.name %></a>
+<br><br>
+    <p><% @playlists.each do |playlist| %>
+     <a href="/playlists/<%= playlist.id %>"><%= playlist.name %></a><p>
     <% end %>
   </div>
-</div>
+
 
 

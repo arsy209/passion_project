@@ -1,8 +1,17 @@
+
+
+
+<br>
+
 <center><div class ="container">
 <% if logged_in? %>
   <%= erb :'playlist/_create_playlist' %>
    <% end %>
 <%else%>
+<br>
+<br>
+<br>
+<br>
 <u><h1>All PlayLists:</h1></u>
 
     <% @playlists.each do |playlist| %>
