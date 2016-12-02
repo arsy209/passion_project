@@ -1,0 +1,8 @@
+<%= display_error %>
+
+<form action="/my_songs" method="POST">
+    <input type="hidden" value="<%= playlist.id %>" name="song[playlist_id]">
+  Song Title:
+    <input name="song[title]" type="text"> Song URL: <input name="song[song_url]" type="text"> Album Art: <input name="song[album_art]" type="text">
+    <input type="submit" value="Make Song." id="button">
+</form>

@@ -1,0 +1,16 @@
+<div class="container">
+ <%= erb :_nav_bar %>
+</div>
+
+<div class="bottom_background"></div>
+
+<div class="bottom">
+  <h1>My Songs</h1>
+  <div class="all_songs"><br><br>
+    <% @songs.each do |song| %>
+      <div class="my_songs"><a href="/songs/<%= song.id %>"><img src="<%= song.title %>"/></a>
+      <%= song.title %></div>
+    <% end %>
+  </div>
+
+</div>

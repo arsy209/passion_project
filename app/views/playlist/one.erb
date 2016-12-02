@@ -1,0 +1,22 @@
+<div class="container">
+ <%= erb :_nav_bar %>
+</div>
+
+<div class="bottom_background"></div>
+
+<div class="bottom">
+  <div class="one_top"><br>
+    <h1><%= @playlist.name %></h1>
+
+    <%= erb :'song/_create_song', :locals => {playlist: @playlist} %>
+    <%= erb :'/playlist/_edit_delete_playlist', :locals => {playlist: @playlist} %><br><br>
+  </div>
+
+  <div class="all_songs"><br><br>
+    Tracks:
+    <ol><% @songs.each do |song| %>
+      <li> <a href="/songs/<%= song.id %>"><img src="<%= song.album_art %>"/></a></li>
+    <% end %></ol>
+  </div>
+
+</div>
