@@ -2,8 +2,8 @@
 <% if logged_in? %>
 <form action="/my_songs" method="POST">
     <input type="hidden" value="<%= playlist.id %>" name="song[playlist_id]">
-  Song Title:
-    <input name="song[title]" type="text"> Song URL: <input name="song[song_url]" type="text">
-    <input type="submit" value="Make Song." id="button">
+  Title:
+    <input name="song[title]" type="text"> URL: <input name="song[song_url]" type="text">
+    <input type="submit" value="Add" id="button">
 </form>
 <%end%>

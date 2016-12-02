@@ -12,7 +12,8 @@
     <% end %>
      <% end %>
     <%else%>
-    Tracks:<br>
+
+    <h2><%=@playlist.user.username%>'s</h2><h3>Tracks:</h3><br>
     <% @songs.each do |song| %>
        <a href="/songs/<%= song.id %>"><%= song.title%></a><br>
 

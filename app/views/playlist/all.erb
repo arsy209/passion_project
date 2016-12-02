@@ -12,10 +12,11 @@
 <br>
 <br>
 <br>
-<u><h1>All PlayLists:</h1></u>
+
+<u><h1><span style="color:blue">Play</span>Lists:</h1></u>
 
     <% @playlists.each do |playlist| %>
-     <ol><a href="/playlists/<%= playlist.id %>"><%= playlist.name %></a></ol>
+     	<h5><a href="/playlists/<%= playlist.id %>"><%= playlist.name %></a></h5>
     <% end %>
 
 
