@@ -6,7 +6,7 @@ class CreateSongs < ActiveRecord::Migration
       t.references  :user
       t.references  :playlist
 
-      t.timestamps
+       t.timestamps(null:false)
     end
   end
 end
