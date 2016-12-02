@@ -1,0 +1,20 @@
+<div class="container">
+  <a href="/login" id="login">Login</a> | Signup<br><br>
+
+<%= display_error %>
+
+  <form action="/signup" method="POST">
+    Username:
+    <input type="text" name="user[username]">
+    <span> Password:</span>
+    <input type="password" name="user[password]">
+    Confirm Password:
+    <input type="password" name="user[password_confirmation]">
+    <input type="submit" value="Signup!" id="button">
+  </form>
+</div>
+
+<div class="bottom_background"></div>
+<div class="bottom">
+
+</div>
